@@ -1076,15 +1076,19 @@ DrawWorkExperience:function(mainContent, mobile){
       var socials = Site.create({"Type": "div", "Class": "socials","Id":"socials","Parent": HomeBannerContent });
 
       var social1 = Site.create({"Type": "a","Href":"https://stackoverflow.com/users/16922206/jmuller70", "Class": "social","Id":"social1", "Parent": socials });
+      social1.setAttribute("target","_blank");
       var social1p = Site.create({"Type": "img","Src":"./img/stacklogo.png", "Class": "picSocails","Id":"social1", "Parent": social1 });
 
       var social2 = Site.create({"Type": "a","Href":"https://www.linkedin.com/in/jake-muller-7b1208176/", "Class": "social","Id":"social1", "Parent": socials });
+      social2.setAttribute("target","_blank");
       var social2p = Site.create({"Type": "img","Src":"./img/linklogo.png", "Class": "picSocails","Id":"social2", "Parent": social2 });
 
       var social3 = Site.create({"Type": "a","Href":"https://www.facebook.com/jake.muller.750", "Class": "social","Id":"social1", "Parent": socials });
+      social2.setAttribute("target","_blank");
       var social3p = Site.create({"Type": "img","Src":"./img/fb.png", "Class": "picSocails","Id":"social3", "Parent": social3 });
 
       var social4 = Site.create({"Type": "a","Href":"https://github.com/JakeLMuller", "Class": "social","Id":"social1", "Parent": socials });
+        social4.setAttribute("target","_blank");
       var social4p = Site.create({"Type": "img","Src":"./img/github.png", "Class": "picSocails","Id":"social4", "Parent": social4 });
       //var frontHomeContentRight = Site.create({"Type": "div","Class": "frontHomeContentRight","Id":"frontHomeContentRight","Parent": HomeBannerContent });
       if (MainContent.offsetWidth < 1500 ){
