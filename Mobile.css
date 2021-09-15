@@ -130,6 +130,7 @@
   margin-left: auto;
   margin-right: auto;
   height: auto;
+  margin-bottom: 0.5%;
   cursor: pointer;
   transition: all .2s ease;
 }

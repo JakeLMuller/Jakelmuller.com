@@ -41,10 +41,18 @@ var Mobile = {
         infoButtonOne.style.marginTop = "10%";
       }
       var socials = Site.create({"Type": "div", "Class": "socialsM","Id":"socials","Parent": HomeBannerContent });
-      var social1 = Site.create({"Type": "img","Src":"./img/stacklogo.png", "Class": "socialM","Id":"social1", "Parent": socials });
-      var social2 = Site.create({"Type": "img","Src":"./img/linklogo.png", "Class": "socialM","Id":"social2", "Parent": socials });
-      var social3 = Site.create({"Type": "img","Src":"./img/fb.png", "Class": "socialM","Id":"social3", "Parent": socials });
-      var social4 = Site.create({"Type": "img","Src":"./img/github.png", "Class": "socialM","Id":"social4", "Parent": socials });
+
+      var social1 = Site.create({"Type": "a","Href":"https://stackoverflow.com/users/16922206/jmuller70", "Class": "socialM","Id":"social1", "Parent": socials });
+      var social1p = Site.create({"Type": "img","Src":"./img/stacklogo.png","Style":"padding-bottom: 40%;", "Class": "picSocails","Id":"social1", "Parent": social1 });
+
+      var social2 = Site.create({"Type": "a","Href":"https://www.linkedin.com/in/jake-muller-7b1208176/", "Class": "socialM","Id":"social1", "Parent": socials });
+      var social2p = Site.create({"Type": "img","Src":"./img/linklogo.png", "Style":"padding-bottom: 40%;","Class": "picSocails","Id":"social2", "Parent": social2 });
+
+      var social3 = Site.create({"Type": "a","Href":"https://www.facebook.com/jake.muller.750", "Class": "socialM","Id":"social1", "Parent": socials });
+      var social3p = Site.create({"Type": "img","Src":"./img/fb.png", "Style":"padding-bottom: 40%;","Class": "picSocails","Id":"social3", "Parent": social3 });
+
+      var social4 = Site.create({"Type": "a","Href":"https://github.com/JakeLMuller", "Class": "socialm","Id":"socialM", "Parent": socials });
+      var social4p = Site.create({"Type": "img","Src":"./img/github.png","Style":"padding-bottom: 40%;", "Class": "picSocails","Id":"social4", "Parent": social4 });
       if (Site.GlobalPage != "Home"){
         if (Site.GlobalPage == "Projects" || Site.GlobalPage == "Contact"){
           socials.style.display = "none";
