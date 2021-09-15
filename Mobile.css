@@ -1,0 +1,168 @@
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@keyframes toLeft {
+  from { margin-left: 0%; }
+  to   { margin-left: 15%;  }
+}
+@keyframes toLeft2 {
+  from { margin-left: 0%; }
+  to   { margin-left: 2.5%;  }
+}
+@keyframes toLeftSmall {
+  from { margin-left: 0%; }
+  to   { margin-left: 15%;  }
+}
+@keyframes fromTop {
+  from { margin-top: 20%; }
+  to   { margin-top: 5%;  }
+}
+@keyframes fromTopSmall {
+  from { margin-top: -20%; }
+  to   { margin-top: 0%;  }
+}
+
+.navInfoM{
+  width: 80%;
+  height: auto;
+  float: left;
+  margin-left: 15%;
+  margin-top: 22%;
+  margin-bottom: 13%;
+  animation: fadein 3s,colorShiftToWhite 2.2s, toLeft .7s;
+}
+.mypicM{
+  height: auto;
+  width: 20%;
+  float: left;
+  border-radius: 50%;
+  margin-top: 3%;
+  padding: 1% 1% 1% 1%;
+  animation: fadein 3s,colorShiftToWhite 2.2s;
+
+}
+.nameM{
+  width: 70%;
+  height: auto;
+  float: left;
+  font-size: 2.5em;
+    margin-top: 3%;
+  color: white;
+  animation: fadein 3s,colorShiftToWhite 2.2s;
+}
+.BottomInfoM{
+  width: 70%;
+  height: auto;
+  float: left;
+  margin-top: 2%;
+  margin-left: 1%;
+  font-size: 1.5em;
+  color: white;
+  animation: fadein 3s,colorShiftToWhite 2.2s;
+}
+.LogoPic{
+  width:15%;
+  height: auto;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 15%;
+  margin-bottom: 10%;
+  animation: fadein 3s;
+}
+.ContentMainM{
+  width: 95%;
+  height: auto;
+  margin-left: 2.5%;
+  color: white;
+  text-align: center;
+  font-size: 1.3em;
+  line-height: 2em;
+  animation: fadein 3s, toLeft2 .7s, colorShiftToWhite 2.2s;
+}
+.infoButtonM{
+  width:70%;
+  height: 5%;
+  margin-left: 15%;
+  margin-right: 2%;
+  margin-top: 5%;
+  color:white;
+  box-shadow: 2px 2px 6px black;
+  float: left;
+  text-align: center;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 1% 1% 0.5% 1%;
+  animation: fadein 3s;
+  font-size: 1.8em;
+  border-radius: 10px;
+  border:1px solid #405169;
+  transition: all .25s ease;
+  animation: fadein 3s,  colorShiftToWhite 2.2s;
+}
+.infoButtonM:hover{
+    background-color:rgba(255, 255, 255, 0.1);
+      box-shadow: 2px 2px 10px black;
+      border:1px solid #405169;
+      color:#405169;
+}
+.bOneM{
+    margin-top: 20%;
+}
+
+.socialsM{
+  position:absolute;
+  width: 10%;
+  height: auto;
+  top:10%;
+  left: 0%;
+  padding-bottom: 2%;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 2px 2px 6px black;
+  animation: absLeft 2.5s;
+
+}
+.socialM{
+  width: 70%;
+  margin-top: 35%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+.socialM:hover{
+  box-shadow: 2px 2px 6px black;
+  transform: scale(1.02);
+}
+@keyframes absLeft {
+  from { left: -10%; }
+  to   { left: 0%;  }
+}
+.imgSingleM{
+  position: absolute;
+    top: 15%;
+    bottom: 10%;
+    right: 0%;
+    left: 0%;
+    width: 100%;
+    height: 90%;
+    z-index: 2001;
+    animation: 0.7s fromBottom2;
+    background-size:contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: black;
+    text-align: center;
+}
+@keyframes  fromBottom2{
+  from {
+    top: 100%;
+  }
+
+  to {
+    top: 15%;
+  }
+}

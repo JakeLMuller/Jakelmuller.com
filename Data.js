@@ -1,0 +1,96 @@
+var Data = {
+
+  Bio:"With over 8 years of hands on professional experience you will leave happy and satisfied. Specializing in Data-Driven, Mobile, Front and Back-end Web Technologies and Native IOS and Android Development.",
+  AboutOverview:"Jake Muller is a Southern New York Full-stack Developer. Who is customer focused, results oriented, and utilizes talents and expertise in an environment to achieve client focued results and satisfaction.<strong> Believeing that client satisfaction and needs comes first.</strong> Acheieveing said results and satisfaction through both professinal experience and self determination.While also realizing a career in this industry revolves around continued learning and education to be one's abilities and skills.<br>  Now serving in Warwick NY, MiddleTown NY, North Carolina, and Flordia. He specializes in Data-Driven, Mobile and Front-end Technologies.",
+  Home:["./img/backgroundMain.jpg","./img/me3.jpg", "Jake Muller", "Software Engineer", "With over 8 years of hands on professional experience you will leave happy and satisfied. Specializing in Data-Driven, Mobile, Front and Back-end Web Technologies and Native IOS and Android Development."],
+  About:["./img/about.jpg", "./img/me2.jpg", "About", "Jake Muller", ""],
+  Projects:["https://wallpaperaccess.com/full/1947423.jpg","./img/me3.jpg", "Projects", "by Jake Muller", ""],
+  Contact:["./img/backgroundMain.jpg","./img/me.jpg", "Jake Muller", "Software Engineer", ""],
+  mobileText: ["Choose Your Platform", "Mobile Focused - Reach Your Ideal Demographic", "Support the people who need you most. Mobile is now part of the family and goes wherever we go. No other marketing channel has this constant contact with it's customers like our phones do. Have your Project become an App on IOS and Android."],
+  TextPillars: [{"img":"./img/bussiness.png","color":"#51b2ba","head":"Design","Title":"Develop What Matters To You","Content":"We will work together to achieve your desired vision and create the right look for you."},
+  {"img":"./img/web.png","color":"#364c88","head":"Develop","Title":"From Web to App to Desktop","Content":"The sky is the limit. Any project, any platform, it’s important that you get your desired outcome."},
+  {"img":"./img/data.png","color":"#008075","head":"Launch","Title":"From Big Data to Small Business","Content":"At this point everything digital is run by data and the web. We have tools and experience to apply this to your project."}],
+  GlobalHomeTextContent:["From Idea To Production","Digitize Your Life, Your Idea, Your Moment", "Everything in life starts out as an idea. From Snapchat, to Instagram, to Facebook. I'm here to help you preserve that idea. To capture the people and moments most important and turn that into software "],
+  HomeBannerPics:["./img/app1.png","./img/ss1.PNG","./img/ss2.PNG","./img/pp1.JPG","./img/ghw6.PNG","./img/intranet1.jpg","./img/t206Long.PNG","./img/T206Wide.PNG","./img/pp2.JPG"],
+  HomeBannerPicsM:["app1.png","ss1.PNG","ss2.PNG","pp1.JPG","ghw6.PNG","intranet1.jpg","t206Long.PNG","T206Wide.PNG","pp2.JPG"],
+  AboutBannerPics: ["me2.jpeg","aboutMeBanner.PNG","me1.jpeg","aboutMeBanner.PNG","about3.jpg"],
+  HomeBannerPics2:["ss1.PNG","ss2.PNG","ss3.PNG","ss4.PNG","ss5.PNG","ss6.PNG","ss7.PNG"],
+  ProjectsBannerPics :["ss1.PNG","ss2.PNG","ss3.PNG","ss4.PNG","ss5.PNG","ss6.PNG","ss7.PNG"],
+  PopUpBannerAssets : ["sp.png","Lowes.png","w.jpg","t206.jpg","t206.jpg","Lowes.png","sp.png"],
+  PopUpBannerColor :["#ffd300","#004990","yellow","#405169","#405169","#004990","#ffd300"],
+  LanguageDrop:["","C#", "Java", "Javascript", "Html", "CSS", "Swift", "SQL", "PHP"],
+  Platforms:["","IOS", "Android", "Web", "Mobile"],
+  OpenSource:["","Yes","No"],
+  PopUpBannerContents : ["SealPro Inc. website supported on both mobile and desktop","Lowes Smart Stuff","Facebook Automated Incentive Advertising","T206 BaseBall Card Trading App","T206 BaseBall Card Trading App","Lowes Smart Stuff","SealPro Inc"],
+  skills:[{"label":"Web-Technologies" , "data":[
+          "Five Year's Experience using JavaScript",
+          "JavaScript Frameworks- Multiple (JQuery, Angular, React)",
+          "Five Year's Experience in HTML + CSS",
+          "Two Year's Experience with Bootstrap",
+          "Six Month's Experience Node.js - Mobile Apps to Server",
+          "Two Year's Experience in PHP - Server-Side Scripting and SQL database calls and Security management",
+          "Three Year's Experience SQL - Creating, Overseeing and Maintaining Client Databases ",
+          "Three Year's Experience Asp.Net - Creating in developing back-end web services, APIs, And front end websites and dashboards.",]},
+    {"label":"Mobile App Technologies" , "data":[
+        "Two Year's Experience in Java/Android Studio- Created Multiple Android Apps",
+        "One Year's Experience with Swift - Created Multiple IOS Apps",
+        "One Year's Experience AWS - Developing and Maintain Client Servers and Databases (AWS Aroura, AWS Instances)",
+        "Three Year's Experience C# - creating multiple web applications, implementing databases and developing multiple web servers and mobile projects. Have a multitude of experience doing many different things in this language.",
+        "Six months Xamarin - Developing multiple IOS and Android forms (later moving to Android studio and X code native languages (Java and Objective C) as per client request)"]}
+],
+  ProjectsData : [{"Image":"./img/gh.png","Title":"Garnet Health Mobile App", "ContentSmall":"Supported on both Android, IOS and Ipad",
+                  "bg":"./img/app1.png","Images":["app1.png","app2.png","app3.png","app4.png","app5.png","app6.png","app7.png"], "Languages":["Objective-C", "Java", "Swift", "XML", "C#"], "Platforms":["IOS", "Android"], "OpenSource":"Yes",
+           "Content":"Garnet Health Mobile App is a mobile solution for patients to view their medical information. The App utilizes integrations from Epic's MyChart for paitents to scheduale appointments, chat with doctors, pay bills and few their medical records. Newest Version of the app is linked below", "Color":"ghostwhite", "Link":"https://apps.apple.com/us/app/garnet-health/id1556106944"},
+
+          {"Image":"./img/gh.png","Title":"Garnet Health Website", "ContentSmall":"Desktop Supported, Fully Responsive, and Mobile Supported", "Platforms":["Web", "Mobile"], "OpenSource":"No",
+            "bg":"./img/ghw1.PNG", "Images":["ghw1.PNG","ghw2.PNG","ghw3.PNG","ghw4.PNG","ghw5.PNG","ghw6.PNG","ghw7.PNG","ghw8.PNG"],"Languages":["Javascript","React","C#", "HTML", "CSS", "MsSQL","PHP"],
+          "Content":"Garnet Health as an organization recently took on a name change from Greater Hudson Health Care. By doing so the entire online presence of the company was rebranded. This site was developed by third party contractors, our marketing team and myself. My contributions included designing the overall look and feel, Epic My chart intrgration and Location based functionality. ", "Color":"ghostwhite", "Link":"https://www.garnethealth.org/"},
+
+          {"Image":"http://sealcoatingofnj.com/img/Sealpro-logo.png","Title":"SealPro Inc.", "ContentSmall":"Desktop verison linked below, Fully Responsive, and Mobile Supported",
+            "bg":"./img/ss1.png", "Images":["sp1.PNG","sp2.PNG","sp3.PNG","sp4.PNG","sp5.PNG","sp6.PNG","sp7.PNG","sp8.PNG"],"Languages":["SQL","Javascript", "HTML", "CSS", "PHP"],"Platforms":["Web", "Mobile"], "OpenSource":"No",
+          "Content":"SealPro Inc. a Asphalt And Sealing Company contracted me to develop their website. Website includes: over 600 photos, Php generated thumb-nails and full resoultion photos for each photo, google maps intrgations, contact form, email templates created from scratch, email campaigns and much more. See more by clicking the link below ", "Color":"ghostwhite", "Link":"http://sealcoatingofnj.com/"},
+
+          {"Image":"./img/pp1.JPG","Title":"Garnet Health Policies and Procedures", "ContentSmall":"Desktop verison linked below, Fully Responsive, and Mobile Supported",
+            "bg":"./img/pp1.JPG", "Images":["pp1.JPG","pp2.JPG","pp3.JPG","pp4.JPG","pp5.JPG","pp6.JPG","pp7.JPG","pp8.JPG","pp9.JPG","pp10.JPG","pp11.JPG","pp12.JPG","pp13.JPG"],"Languages":["C#", ".Net", "MsSQL","Javascript", "HTML", "CSS"],"Platforms":["Web", "Mobile"], "OpenSource":"Yes",
+          "Content":"Garnet Health Policies and Procedures is content management system for policies over three hospitals and multiple doctor offices. This Application allows for users to upload a policy and set metadata including concurrers and approvers. Each concurrer has to approve the policy before moving on to the next step. Once the final approval is finished the policy become live and is followed by each department. The app is filters each policy by department, category and location. Access to view/edit each policy is department based and a administration page is used to set and edit access. The app also features fully developed messaging and custom emails that are sent out. The app was developed by myself as the only developer and took 3 months to finish. The backend is in C#, .Net and MsSql, while the front end is in Javascript, HTML and CSS. The app is an internal tool for Garnet health but a copy of the source code can still be view. ", "Color":"ghostwhite", "Link":"http://sealcoatingofnj.com/"},
+
+          {"Image":"./img/gh.png","Title":"Garnet Health Intranet", "ContentSmall":"Desktop Supported, Fully Responsive, and Mobile Supported","Platforms":["Web"], "OpenSource":"No",
+            "bg":"./img/intranet1.jpg", "Images":["intranet1.jpg","intranet2.jpg","intranet3.jpg","intranet4.jpg","intranet5.jpg","intranet6.jpg"],"Languages":["Javascript","MsSQL","C#", "HTML", "CSS",],
+          "Content":"Garnet Health as an organization recently took on a name change from Greater Hudson Health Care. By doing so the entire online presence of the company was rebranded. The Garnet Health intranet was developed within 2 months and I was the only Engineer to develop this site. It has over 4000 daily active users who use the site for a wide variety of features. Higlighted features include hosting and display all department's file to be view in broswer, viewing scheduling, viewing on call doctors, searching employee contact information and scheduling. Site is internal only and can not be viewed outside of the hospital network", "Color":"ghostwhite", "Link":"Private"},
+
+          {"Image":"./img/Lowes.png","Title":"Lowes SmartStuff","Platforms":["IOS", "Android"], "Open Source":"No","Languages":["Javascript", "HTML", "CSS", "PHP"],"bg":"./img/ss2.png","Images":["ss2.PNG","lowesLong.PNG","ss6.PNG"], "ContentSmall":"Desktop verison linked below, Fully Responsive, Please contact me for demo of Android App and/Or IOS App", "Content":"*Application is no longer live or supported* SmartStuff By GearBrain was the first one of many to be developed with a full JavaScript framework created from scratch.The actual development of the app only took me a month. Developing the framework took a little bit longer.With the JavaScript framework in mind, overcoming server speeds was a must. So, a serverside caching system was developed. Once a single page loads, the server caches the json response and the page loads in under 10ms. Lowes ended up cancelling the project after the app was developed.  However, the project is still up and available to be looked at.", "Color":"ghostwhite", "Link":"https://www.lowes.com/"},
+          {"Image":"./img/ls1.PNG","bg":"./img/ls1.PNG","Images":["ls1.PNG","ls2.PNG","ls3.PNG","ls4.PNG", "ls.PNG"],"Platforms":["IOS", "Android", "Web", "Mobile"], "OpenSource":"Yes", "Languages":["Javascript", "HTML", "CSS", "PHP","Delphi","C++"],"Title":"LiveStuff","ContentSmall":"Desktop verison linked below, Fully Responsive, Please contact me for demo of Android App and/Or IOS App", "Content":"LiveStuff is a project spaning multiple years over development. It is a personal content management that allows users to store information on there favorite places, items and people. I helped develop the UI/UX of application for Web and Android. Also Developed Multiple backend actions in php for getting and editing data in SQL and PHP. ", "Color":"ghostwhite", "Link":"https://livestuff.com/Login.html"},
+
+          {"Image":"./img/t206.jpg","Images":["ss4.PNG","t206.PNG","t206Long.PNG","T206Wide.PNG","T206Wide2.PNG"],"Languages":["Javascript", "HTML", "CSS","MySQL", "PHP"],"Platforms":["IOS", "Android", "Web", "Mobile"], "OpenSource":"Yes","bg":"./img/ss4.png","Title":"T206","ContentSmall":"Desktop verison linked below, Fully Responsive, Please contact me for demo of Android App and/Or IOS App", "Content":"The tobacco card set known as T206 was issued from 1909 to 1911 in cigarette and loose tobacco packs through 16 different brands owned by the American Tobacco Company. It is a landmark set in the history of baseball card collecting, due to its size and rarity, and the quality of its color lithographs. T206 allows for users to buy, trade, sell and digitally upload each card. This is like the others listed above are professional projects I've developed. Has both support for IOS And Android. Please contact me for demo.", "Link":"https://T206app.com","Color":"ghostwhite"}],
+
+  WorkExperience: [
+        {"label":"Garnet Health - Goshen, NY", "Title":"Software Developer", "When":"December 2019 to Present" , "data":[
+        "developed company wide intranet site with Asp.net MVC, Sql Server, JavaScript and CSS",
+        "created and implemented file server scanning to allow for files uploads and file viewing through local intranet site",
+        "programmed hospital faxing application",
+        "developed sql database and pdf rendering for hospital faxes to be digital managed through an intranet dashboard.",
+        "created digital on-call scheduling through SQL database and intranet dashboard.",
+        "implemented and created policy and produce application.",
+        "Created digital management of policies and procedures through web-based application.",
+        "Implemented checking out each policy to allow only one person to work at one time",
+        ]},
+        {"label":"Live Technology - Tuxedo Park, NY", "Title":"Senior Software Developer", "When":"March 2018 to December 2019" , "data":[
+        "Lead Development Team to Create Multiple IOS and Android Apps",
+        "Development of Lowes Smart Stuff App IOS and Android",
+        "Created and Developed Live Stuff App IOS and Android",
+        "Led Team to development overhaul and reskin of Desktop Interface (Live Platform.com)",
+        "Developed and Maintained both Client and Server-Side Caching System for Performance Improvements and overall stability",
+        "Creating and Maintaining multiple web forms with ajax calls to different client SQL databases and APIs",
+        "Worked with multiple companies' API's (YouTube, eBay, Century 21, etc.)"]},
+        {"label":"Live Technology - Tuxedo Park, NY", "Title":"Software Developer", "When":"November 2017 to March 2018" , "data":[
+        "Promoted to Senior Developer in first 3 months",
+        "Developed Blockchain algorithm for improving security without compromising functionality",
+        "Implemented and developed new search algorithms and search functionality for clients' standard customer facing data requests",
+        "Improving overall searching speed and efficiency by avg. 125 milliseconds (Request Call Avg Time: Before 400-450 milliseconds, After: 125-250 milliseconds)",
+        "Proficient in server scripting such as, PHP and in-house custom language LSV2",
+        "Maintained and responsible for all data requests and queries to SQL Database to ensure security - PHP, Node.js, LSV2",
+        "UI Design of client sites - JavaScript, Node.js, CSS, HTML",
+        "Worked on multiple client systems including but not limited to Century 21 Real Estate, JDsports, CUNA Mutual, Weichert Real Estate, North Western Mutual and Bank of America.",
+        "Developed and worked on multiple Dynamic Ad Campaign for clients (named above)",]}
+  ],
+}

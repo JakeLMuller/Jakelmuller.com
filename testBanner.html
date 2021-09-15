@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<title>Jake L. Muller</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="./main.css" />
+	  <script src="./Data.js"></script>
+		<script src="./main.js"></script>
+
+	</head>
+	<body>
+		<div id="Main">
+		</div>
+		<script>
+				var MainElement = document.getElementById('Main');
+				var mobile = "";
+				if (MainElement.offsetWidth > 1100){
+
+					MainElement.onscroll = function(){
+						Site.HandleHomeScroll(this);
+
+					}
+					Site.drawHomeBanner(MainElement,"","Y");
+					Site.DrawHomePageContent(mobile);
+					Site.DrawHomeSubSection(mobile);
+					Site.DrawHomeBottomContent(mobile);
+					Site.DrawFooter(mobile);
+				}else{
+					 Window.location.href = "./mHome.html"
+				}
+
+		</script>
+  </body>
+</html>

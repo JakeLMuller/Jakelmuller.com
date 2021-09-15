@@ -1,0 +1,109 @@
+<html>
+  <head>
+    <style>
+    .Main{
+      background-image:url("https://images.unsplash.com/photo-1579546929662-711aa81148cf?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHw%3D&w=1000&q=80");
+      background-size: cover;
+      background-repeat: repeat-y;
+      width: 100%;
+      height: auto;
+      float:left;
+
+    }
+    .subDiv1{
+      font-size: 200px;
+      text-align: center;
+      color:black;
+      float: left;
+      width:100%;
+      background-color: white;
+      box-shadow: 2px 2px  6px grey;
+      margin-bottom: 3%;
+
+    }
+    .bannerImage{
+      width:100%;
+      height:60%;
+
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .paragraph{
+      width: 70%;
+      height: auto;
+      margin-left: 15%;
+      line-height: 2em;
+      font-size: 30px;
+      text-align: center;
+      background-color: white;
+      box-shadow: 2px 2px  6px grey;
+      margin-top: 5%;
+      margin-bottom: 5%;
+      float: left;
+
+    }
+    .header{
+      width: 40%;
+      height: auto;
+      float: left;
+      font-size: 100px;
+      text-align: center;
+      margin-left: 30%;
+      color:black;
+      margin-top: 4%;
+    }
+    .subHeader{
+      width: 20%;
+      height: auto;
+      float: left;
+      font-size: 20px;
+      text-align: center;
+      margin-left: 40%;
+      margin-bottom: 4%;
+    }
+    </style>
+  </head>
+
+
+
+
+  <body>
+
+    <div id = "main" class= "Main"> </div>
+
+    <script>
+
+
+      var getMain = document.getElementById('main');
+
+      for (var i = 0 ; i < 1; i++){
+        create(getMain, "div", "subDiv1", "", "Local News");
+        create(getMain, "div", "header", "", "Accept The Cross");
+        create(getMain, "div", "subHeader", "", "Author: Jake L. Muller");
+        create(getMain, "img", "bannerImage", "https://images.squarespace-cdn.com/content/v1/58cc676c86e6c09542c6661a/1555522632451-ML5L5ARIAJSNJOQVWCDN/ke17ZwdGBToddI8pDm48kA47qaxzGU3oa60Mv3IrElh7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0hGaawTDWlunVGEFKwsEdnE_ZbuhWuTjDl9Hn0Vaidb23CyzgPgNZ_l0zINYXrCLdg/Depositphotos_2895315_xl-2015+FB.jpg?format=2500w");
+        create(getMain, "div", "paragraph", "", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.");
+      }
+
+
+
+      function create (parent, type, className, img, text){
+          var elem = document.createElement(type);
+          elem.className = className;
+          if (img){
+            elem.src = img;
+          }
+          if (text){
+            elem.innerHTML = text
+          }
+          parent.appendChild(elem);
+      }
+
+
+    </script>
+  </body>
+
+
+
+
+</html>
