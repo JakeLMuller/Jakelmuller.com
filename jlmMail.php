@@ -58,7 +58,7 @@ ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_report
            <td align='center' width='90%'  bgcolor='#A9A9A9' style='background-color:#405169;'>
                <table cellpadding='3' cellspacing='3' border='0' >
                    <tr>
-                       <td align='center' style='width: 300px;  margin: auto; min-width: 300px;'><img src='https://upload.wikimedia.org/wikipedia/commons/0/0c/Thank_you_in_many_languages%2C_b%26w.png' width='80%' align='middle' style='width:80%;' /></td>
+                       <td align='center' style='width: 300px;  margin: auto; min-width: 300px;'><img src='http://www.jakelmuller.com/v2/img/Logos/JMLogo.png' width='80%' align='middle' style='width:80%;' /></td>
                    </tr>
                </table>
            </td>

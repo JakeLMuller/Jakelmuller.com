@@ -183,20 +183,15 @@ loadjscssfile:function(filename, filetype){
     Site.drawHomeBanner(MainElement,"Contact",mobile);
     Site.DrawContactForm(mobile);
     Site.DrawFooter(mobile);
-      header.style.backgroundPosition = "center 40%";
-        header.style.backgroundSize = "18%";
-          header.style.backgroundSize = "48%";
-          header.style.display = "none";
 
   },
   DrawContactForm:function(mobile){
       var mainElement = document.getElementById('Main');
-      var SubSection = Site.create({"Type": "div","Class":"SubSection","Style":"padding-top:2%;height:20%;", "Id":"SubSection","Parent": mainElement});
-      if (mobile){
-        SubSection.style.height = "30%";
-      }
-      var TextContentHeaderInvert = Site.create({"Type": "div","Class":"TextContentHeaderInvert","Id":"TextContentHeaderInvert","Content":"Contact", "Parent": SubSection});
-      var TextContentSubInvert = Site.create({"Type": "div","Class":"TextContentSubInvert","Style":"text-shadow: 0.1px 0.1px 1px black;","Id":"TextContentSubInvert","Content":"Contact", "Parent": SubSection});
+      var SubSection = Site.create({"Type": "div","Class":"SubSection","Style":"padding-top:2%;height:auto", "Id":"SubSection","Parent": mainElement});
+
+      var SummaryContainerImg = Site.create({ "Type": "img", "Src": "./img/Logos/JMLogo.png",  "Class": "SummaryContainerImg", "Parent": SubSection });
+      var overViewHeader =Site.create({"Type": "div","Class":"overViewHeader","Id":"overViewHeader","Content":"Let's Get In Touch", "Parent": SubSection});
+      var TextContentSubInvert = Site.create({"Type": "div","Class":"TextContentSubInvert","Style":"text-shadow: 0.1px 0.1px 1px black;padding-bottom:2%;","Id":"TextContentSubInvert","Content":"Contact", "Parent": SubSection});
       TextContentSubInvert.innerHTML = "Please reach out with any Questions or Concerns";
       var SubSection1 = Site.create({"Type": "div","Class":"SubSection","Style":"padding-top:2%;background-color:#5d7699;", "Id":"SubSection","Parent": mainElement});
       var email = Site.create({"Type": "input","Class":"inputField", "Id":"email","Style":"background-image:url(./img/mail.png);","Parent": SubSection1});
@@ -207,6 +202,9 @@ loadjscssfile:function(filename, filetype){
       msg.setAttribute("placeholder", "Type your message...");
       var TextContentButtonInvert = Site.create({"Type": "div","Class":"TextContentButtonInvert","Style":"width:40%;margin-left:30%;padding-bottom:1%;margin-top:4%;", "Id":"TextContentButton","Content":"Send Message","Parent": SubSection1});
       if (mobile){
+        SummaryContainerImg.style.width = "20%";
+        SummaryContainerImg.style.marginLeft = "40%";
+        overViewHeader.style.fontSize = "2.5em";
         SubSection.style.height = "auto";
         SubSection1.style.height = "auto";
         SubSection1.style.paddingBottom = "50px";
@@ -548,6 +546,10 @@ loadjscssfile:function(filename, filetype){
             }
             var PopUpContentHolder = Site.create({"Type": "div", "Class":"PopUpContentHolder","Id":"PopUpContentHolder","Content":projectData["Content"], "Parent": OverlayProjectExpandCard});
             var PopUpButton1 = Site.create({"Type": "a","Class":"PopUpButton","Id":"PopUpButton","Content":"View Code","Parent": OverlayProjectExpandCard});
+            if (projectData["Code"]){
+              PopUpButton1.href = projectData["Code"];
+            }
+            PopUpButton1.setAttribute("target","_blank");
             var PopUpButton2 = Site.create({"Type": "a","Href":projectData["Link"], "Class":"PopUpButton","Id":"PopUpButton","Content":"View Site","Style":"", "Parent": OverlayProjectExpandCard});
             PopUpButton2.setAttribute("target","_blank");
             if (checkM == "Y"){
@@ -1068,8 +1070,8 @@ DrawWorkExperience:function(mainContent, mobile){
       var BottomInfo = Site.create({"Type": "div", "Class": "BottomInfo","Id":"BottomInfo","Content":Data[Page][3], "Parent": navInfo });
       var ContentMain = Site.create({"Type": "div","Class": "ContentMain","Id":"ContentMain","Content":Data[Page][4], "Parent": frontHomeContentLeft });
 
-      var infoButtonOne = Site.create({"Type": "a", "Href":"", "Class": "infoButton bOne","Id":"infoButtonOne","Content":"Request A Work Order", "Parent": frontHomeContentLeft });
-      var infoButtonTwo = Site.create({"Type": "a", "Href":"", "Class": "infoButton bTwo","Id":"infoButtonTwo","Content":"View Prior Projects", "Parent": frontHomeContentLeft });
+      var infoButtonOne = Site.create({"Type": "a", "Href":"./Contact.html", "Class": "infoButton bOne","Id":"infoButtonOne","Content":"Request A Work Order", "Parent": frontHomeContentLeft });
+      var infoButtonTwo = Site.create({"Type": "a", "Href":"./Projects.html", "Class": "infoButton bTwo","Id":"infoButtonTwo","Content":"View Prior Projects", "Parent": frontHomeContentLeft });
 
       var socials = Site.create({"Type": "div", "Class": "socials","Id":"socials","Parent": HomeBannerContent });
       var social1 = Site.create({"Type": "img","Src":"./img/stacklogo.png", "Class": "social","Id":"social1", "Parent": socials });
@@ -1083,7 +1085,7 @@ DrawWorkExperience:function(mainContent, mobile){
         BottomInfo.style.marginLeft = "0.5%";
       }
       if (Site.GlobalPage != "Home"){
-        if (Site.GlobalPage == "Projects"){
+        if (Site.GlobalPage == "Projects" || Site.GlobalPage == "Contact"){
           socials.style.display = "none";
           ContentMain.style.display = "none";
           infoButtonOne.style.display = "none";
@@ -1091,6 +1093,10 @@ DrawWorkExperience:function(mainContent, mobile){
           setTimeout(function () {
                 HomeBanner.style.height = "40%";
           },300);
+          if (Site.GlobalPage == "Contact"){
+            BottomInfo.style.fontSize = "1.8em";
+            BottomInfo.style.marginLeft = "0%";
+          }
         }else{
           setTimeout(function () {
                 HomeBanner.style.height = "70%";

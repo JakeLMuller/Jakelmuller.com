@@ -19,8 +19,8 @@ var Mobile = {
       var name = Site.create({"Type": "div", "Class": "nameM","Id":"name","Content":Data[Page][2], "Parent": navInfo });
       var BottomInfo = Site.create({"Type": "div", "Class": "BottomInfoM","Id":"BottomInfo","Content":Data[Page][3], "Parent": navInfo });
       var ContentMain = Site.create({"Type": "div","Class": "ContentMainM","Id":"ContentMain","Content":Data[Page][4], "Parent": frontHomeContentLeft });
-      var infoButtonOne = Site.create({"Type": "a", "Href":"", "Class": "infoButtonM bOneM","Id":"infoButtonOne","Content":"Request A Work Order", "Parent": frontHomeContentLeft });
-      var infoButtonTwo = Site.create({"Type": "a", "Href":"", "Class": "infoButtonM bTwo","Id":"infoButtonTwo","Content":"View Prior Projects", "Parent": frontHomeContentLeft });
+      var infoButtonOne = Site.create({"Type": "a", "Href":"./Contact.html", "Class": "infoButtonM bOneM","Id":"infoButtonOne","Content":"Request A Work Order", "Parent": frontHomeContentLeft });
+      var infoButtonTwo = Site.create({"Type": "a", "Href":"./Projects.html", "Class": "infoButtonM bTwo","Id":"infoButtonTwo","Content":"View Prior Projects", "Parent": frontHomeContentLeft });
       if (MainContent.offsetWidth < 350){
         name.style.fontSize = "1.5em";
         BottomInfo.style.fontSize = "1.1em";
@@ -46,7 +46,7 @@ var Mobile = {
       var social3 = Site.create({"Type": "img","Src":"./img/fb.png", "Class": "socialM","Id":"social3", "Parent": socials });
       var social4 = Site.create({"Type": "img","Src":"./img/github.png", "Class": "socialM","Id":"social4", "Parent": socials });
       if (Site.GlobalPage != "Home"){
-        if (Site.GlobalPage == "Projects"){
+        if (Site.GlobalPage == "Projects" || Site.GlobalPage == "Contact"){
           socials.style.display = "none";
           ContentMain.style.display = "none";
           infoButtonOne.style.display = "none";
@@ -55,6 +55,10 @@ var Mobile = {
           setTimeout(function () {
                 HomeBanner.style.height = "30%";
           },300);
+          if (Site.GlobalPage == "Contact"){
+            BottomInfo.style.fontSize = "0.8em";
+            BottomInfo.style.marginLeft = "0%";
+          }
         }else{
           setTimeout(function () {
                 HomeBanner.style.height = "40%";
