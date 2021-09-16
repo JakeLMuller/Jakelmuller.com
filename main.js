@@ -174,6 +174,7 @@ loadjscssfile:function(filename, filetype){
     Site.DrawAboutSummary(mobile);
     var get = document.getElementById('mainContent');
     Site.DrawAboutBannerSection(get, "About", mobile);
+    Site.DrawNotableAchievementsSection(get, mobile)
     Site.DrawSkills(mainElement, mobile);
     Site.DrawWorkExperience(mainElement, mobile);
     Site.DrawFooter(mobile);
@@ -566,6 +567,7 @@ loadjscssfile:function(filename, filetype){
               PopUpContentHolder.style.marginLeft = "2.5%";
               PopUpButton1.style.width = "40%";
               PopUpButton1.style.marginLeft = "7.5%";
+              PopUpButton1.style.fontSize = "1.1em";
               PopUpButton2.style.fontSize = "1.1em";
               PopUpButton2.style.width = "40%";
               PopUpButton2.style.fontSize = "1.1em";
@@ -575,6 +577,11 @@ loadjscssfile:function(filename, filetype){
               PopUpButton1.style.display="none";
               PopUpButton2.style.width = "80%";
               PopUpButton2.style.marginLeft = "10%";
+            }
+            if (projectData["Link"] == "private"){
+              PopUpButton2.style.display="none";
+              PopUpButton1.style.width = "80%";
+              PopUpButton1.style.marginLeft = "10%";
             }
           }
       }
@@ -679,11 +686,37 @@ loadjscssfile:function(filename, filetype){
       WorkExperience.style.fontSize = "105%";
     }
   },
+  DrawNotableAchievementsSection:function(Content, mobile){
+      var GalleryHolder = Site.create({"Type": "div","Class":"GalleryHolder","Id":"GalleryHolder","Parent": Content});
+    var TextContentHeader2 = Site.create({"Type": "div","Class":"TextContentHeader","Content":"Achievements and Feedback","Id":"TextContentHeader2","Parent": GalleryHolder});
+    var TextContentSub = Site.create({"Type": "div","Class":"TextContentSub","Style":"padding-bottom:3%;", "Id":"TextContentSub","Content":"Recognition from clients and job's I've had","Parent": GalleryHolder});
+    for (var i = 0; i < Data.achievementsPics.length; i++){
+      var achPics = Site.create({"Type": "img","Src":Data.achievementsPics[i], "Class":"achPics","Id":"achPics","Parent": GalleryHolder});
+      if (i <= 1){
+        achPics.onclick = function(){
+          window.open("./img/gems2021.pdf", '_blank');
+        }
+      }
+      if (mobile){
+        achPics.style.width = "70%";
+        achPics.style.marginLeft = "15%";
+        achPics.style.marginBottom = "2%";
+      }
+    }
+    if (mobile){
+      TextContentHeader2.style.fontSize = "2em";
+      TextContentSub.style.fontSize = "1.2em";
+    }
+  },
   DrawAboutBannerSection:function(Content, Page, mobile){
       var GalleryHolder = Site.create({"Type": "div","Class":"GalleryHolder","Id":"GalleryHolder","Parent": Content});
     var TextContentHeader2 = Site.create({"Type": "div","Class":"TextContentHeader","Content":"Gallery","Id":"TextContentHeader2","Parent": GalleryHolder});
     var TextContentSub = Site.create({"Type": "div","Class":"TextContentSub","Id":"TextContentSub","Content":"Snapshots of me and my life","Parent": GalleryHolder});
     Site.drawBanner(GalleryHolder, Page, mobile);
+    if (mobile){
+      TextContentHeader2.style.fontSize = "2.5em";
+      TextContentSub.style.fontSize = "1.4em";
+    }
   },
   DrawAboutSummary:function(mobile){
     var mainElement = document.getElementById('Main');
