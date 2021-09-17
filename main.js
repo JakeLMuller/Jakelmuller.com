@@ -458,9 +458,13 @@ loadjscssfile:function(filename, filetype){
       if (document.getElementById('Main').offsetWidth < 1200){
           mobile = "Y";
       }
-      Site.CurrentProjectData = projects;
+      if (projects){
+        Site.CurrentProjectData = projects;
+      }else{
+        Site.CurrentProjectData = Data.ProjectsData;
+      }
       for(var i =0; i < projects.length; i++){
-          var ProjectCard = Site.create({"Type": "div","Class":"ProjectCard","Style":"background-image:url('"+Data.ProjectsData[i]["bg"]+"');", "Id":i+"Projects","Parent": ProjectHolder});
+          var ProjectCard = Site.create({"Type": "div","Class":"ProjectCard","Style":"background-image:url('"+Site.CurrentProjectData[i]["bg"]+"');", "Id":i+"Projects","Parent": ProjectHolder});
           if (mobile){
             ProjectCard.style.width = "46%";
             ProjectCard.style.height = "30%";
@@ -694,7 +698,7 @@ loadjscssfile:function(filename, filetype){
       var achPics = Site.create({"Type": "img","Src":Data.achievementsPics[i], "Class":"achPics","Id":"achPics","Parent": GalleryHolder});
       if (i <= 1){
         achPics.onclick = function(){
-          window.open("./img/gems2021.pdf", '_blank');
+          window.open("./img/Gems2021.pdf", '_blank');
         }
       }
       if (mobile){
@@ -766,6 +770,14 @@ DrawWorkExperience:function(mainContent, mobile){
   var WorkExperience = Data.WorkExperience;
   for (var i = 0; i < WorkExperience.length; i++){
       Site.DrawWorkExperienceContainer(WorkExperienceContainer,WorkExperience[i].label, WorkExperience[i].Title, WorkExperience[i].When, WorkExperience[i].data , i, mobile);
+  }
+  var TextContentButton = Site.create({"Type": "div","Class":"TextContentButton","Id":"TextContentButton","Content":"View Full Resume","Parent": WorkExperienceContainer});
+  TextContentButton.onclick = function(){
+    window.open("./img/Resume.pdf", '_blank');
+  }
+  if (mobile){
+    TextContentButton.style.width = "85%";
+    TextContentButton.style.marginLeft = "7.5%";
   }
 },
   DrawBreadCrumbTrail:function(parent, crumbs){
@@ -1183,7 +1195,10 @@ DrawWorkExperience:function(mainContent, mobile){
     var Banner = Site.create({"Type": "div","Class": "Banner","Id":"Banner", "Parent": MainContent });
     Banner.onclick = function (event) {
       if (event.target.id == "Banner"){
-        Site.DrawSlideUpImage("./img/"+Site.globalImages[Site.GlobalImageCount], "Y");
+        var url = this.style.backgroundImage.replace("url(", "");
+        url = url.replace(")", "");
+        var strWithOutQuotes= url.replace(/^"(.*)"$/, '$1');
+        Site.DrawSlideUpImage(strWithOutQuotes, "Y");
       }
     }
     if(mobile){

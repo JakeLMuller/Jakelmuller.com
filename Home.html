@@ -6,8 +6,7 @@
 		<link rel="stylesheet" href="./main.css" />
 	  <script src="./Data.js"></script>
 		<script src="./main.js"></script>
-		<link rel='shortcut icon' href='./img/Logos/JMlogo.png' type='image/x-icon' />
-	
+		<link rel='shortcut icon' href='./img/favicon.ico' type='image/x-icon' />
 
 	</head>
 	<body>
@@ -29,7 +28,11 @@
 				}else{
 					 window.location.href = "./mHome.html"
 				}
-
+				window.onresize = function(){
+					if (MainElement.offsetWidth < 1200){
+							window.location.href = window.location.href;
+					}
+				}
 		</script>
   </body>
 </html>

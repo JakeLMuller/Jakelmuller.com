@@ -48,7 +48,7 @@ var Data = {
           "Content":"Garnet Health as an organization recently took on a name change from Greater Hudson Health Care. By doing so the entire online presence of the company was rebranded. This site was developed by third party contractors, our marketing team and myself. My contributions included designing the overall look and feel, Epic My Chart integration and Location based functionality. ", "Color":"ghostwhite", "Link":"https://www.garnethealth.org/"},
           {"Image":"./img/JMS1.png","Title":"JakeLMuller.com", "ContentSmall":"Desktop Supported, Fully Responsive, and Mobile Supported", "Platforms":["Web", "Mobile"], "OpenSource":"Yes",
             "bg":"./img/JMS1.png", "Images":["JMS1.png","JMS7.png","JMS2.png","JMS3.png","JMS4.png","JMS5.png","JMS6.png"],"Languages":["Javascript", "HTML", "CSS", "SQL","PHP"],
-          "Content":"JakeLMuller.com is a online portfolio of my past work throughout my career. Inlcuding Professional projects from both and present jobs and clients. Website was developed in vanilla Javascript and Css with a little PHP thrown in. Please see link below for source code.  ", "Color":"ghostwhite", "Link":"https://www.garnethealth.org/"},
+          "Content":"JakeLMuller.com is a online portfolio of my past work throughout my career. Including professional projects from both past and present jobs and clients. Website was developed in vanilla Javascript and Css with a little PHP thrown in. Please see link below for source code.  ", "Color":"ghostwhite", "Link":"https://www.garnethealth.org/"},
 
           {"Image":"http://sealcoatingofnj.com/img/Sealpro-logo.png","Title":"SealPro Inc.", "ContentSmall":"Desktop verison linked below, Fully Responsive, and Mobile Supported","Code":"https://github.com/JakeLMuller/Jakelmuller.com",
             "bg":"./img/ss1.PNG", "Images":["sp1.PNG","sp2.PNG","sp3.PNG","sp4.PNG","sp5.PNG","sp6.PNG","sp7.PNG","sp8.PNG"],"Languages":["SQL","Javascript", "HTML", "CSS", "PHP"],"Platforms":["Web", "Mobile"], "OpenSource":"No",
@@ -69,7 +69,7 @@ var Data = {
 
   WorkExperience: [
         {"label":"Garnet Health - Goshen, NY", "Title":"Software Engineer", "When":"December 2019 to Present" , "data":[
-        "Sole engineer to develop Garnet Health Mobile App on IOS and Android",  
+        "Sole engineer to develop Garnet Health Mobile App on IOS and Android",
         "developed company wide intranet site with Asp.net MVC, Sql Server, JavaScript and CSS",
         "created and implemented file server scanning to allow for files uploads and file viewing through local intranet site",
         "programmed hospital faxing application",

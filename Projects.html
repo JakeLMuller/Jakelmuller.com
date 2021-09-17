@@ -8,21 +8,26 @@
 		 <script src="./Mobile.js"></script>
 		  <script src="./Data.js"></script>
 		<script src="./main.js"></script>
-		<link rel='shortcut icon' href='./img/Logos/JMlogo.png' type='image/x-icon' />
-	
+		<link rel='shortcut icon' href='./img/favicon.ico' type='image/x-icon' />
+
 	</head>
 	<body>
 		<div id="Main">
 		</div>
 		<script>
 		var MainElement = document.getElementById('Main');
-			if (MainElement.offsetWidth > 1200){
+			if (MainElement.offsetWidth > 800){
 				Site.DrawProjectsPage();
 				MainElement.onscroll = function(){
 					Site.HandleHomeScroll(this);
 				}
 			}else{
 				Site.DrawProjectsPage("Y");
+			}
+			window.onresize = function(){
+				if (MainElement.offsetWidth < 800){
+						window.location.href = window.location.href;
+				}
 			}
 		</script>
   </body>
