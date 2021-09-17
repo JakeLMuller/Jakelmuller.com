@@ -40,6 +40,7 @@ var Mobile = {
         ContentMain.style.fontSize = "1.8em";
         infoButtonOne.style.marginTop = "10%";
       }
+
       var socials = Site.create({"Type": "div", "Class": "socialsM","Id":"socials","Parent": HomeBannerContent });
 
       var social1 = Site.create({"Type": "a","Href":"https://stackoverflow.com/users/16922206/jmuller70", "Class": "socialM","Id":"social1", "Parent": socials });
@@ -59,17 +60,37 @@ var Mobile = {
       var social4p = Site.create({"Type": "img","Src":"./img/github.png","Style":"padding-bottom: 40%;", "Class": "picSocails","Id":"social4", "Parent": social4 });
       if (Site.GlobalPage != "Home"){
         if (Site.GlobalPage == "Projects" || Site.GlobalPage == "Contact"){
-          socials.style.display = "none";
-          ContentMain.style.display = "none";
-          infoButtonOne.style.display = "none";
-          infoButtonTwo.style.display = "none";
-          navInfo.style.marginTop = "14%";
-          setTimeout(function () {
-                HomeBanner.style.height = "30%";
-          },300);
-          if (Site.GlobalPage == "Contact"){
-            BottomInfo.style.fontSize = "0.8em";
-            BottomInfo.style.marginLeft = "0%";
+
+          if (screen.width > screen.height){
+
+            socials.style.display = "none";
+            ContentMain.style.display = "none";
+            infoButtonOne.style.display = "none";
+            infoButtonTwo.style.display = "none";
+            navInfo.style.marginTop = "0%";
+            setTimeout(function () {
+                  HomeBanner.style.height = "40%";
+            },300);
+            if (Site.GlobalPage == "Contact"){
+              name.style.fontSize = "0.8em";
+              navInfo.style.marginTop = "-2%";
+              BottomInfo.style.fontSize = "0.6em";
+              BottomInfo.style.marginLeft = "0%";
+            }
+
+          }else{
+            socials.style.display = "none";
+            ContentMain.style.display = "none";
+            infoButtonOne.style.display = "none";
+            infoButtonTwo.style.display = "none";
+            navInfo.style.marginTop = "10%";
+            setTimeout(function () {
+                  HomeBanner.style.height = "30%";
+            },300);
+            if (Site.GlobalPage == "Contact"){
+              BottomInfo.style.fontSize = "0.8em";
+              BottomInfo.style.marginLeft = "0%";
+            }
           }
         }else{
           setTimeout(function () {
@@ -83,7 +104,30 @@ var Mobile = {
           infoButtonTwo.style.display = "none";
         }
       }
+      if (screen.width > screen.height){
+          HomeBanner.style.height = "200%";
+          navInfo.className = "navInfoMWide";
+          name.style.fontSize = "2.5em";
+          BottomInfo.style.fontSize = "1.3em";
+          infoButtonOne.style.marginTop = "10%";
+          infoButtonOne.style.fontSize = "1.3em";
+          infoButtonTwo.style.fontSize = "1.3em";
+          ContentMain.className = "ContentMainMWide";
+          mypic.style.width = "12%";
 
+          socials.className = "socialsMWide";
+          if (screen.width > 800) {
+              mypic.style.marginLeft = "15%";
+          }else{
+            mypic.style.marginLeft = "5%";
+          }
+          if (Site.GlobalPage == "Contact"){
+            name.style.fontSize = "1.5em";
+            navInfo.style.marginTop = "-2%";
+            BottomInfo.style.fontSize = "1em";
+            BottomInfo.style.marginLeft = "0%";
+          }
+      }
   },
   drawNavBar:function(MainContent){
       var nav = Site.create({"Type": "div","Class": "TopNavigation","Id":"TopNavigation","Parent": MainContent });
@@ -112,5 +156,17 @@ var Mobile = {
 
         Site.sildeMenu(menuNav, "Y")
     }
+    if (screen.width > screen.height){
+
+      logoContainer.style.width = "7%";
+      menu.style.width = "5%";
+      menu.style.marginLeft = "17%";
+      nav.style.height = "10%";
+    }else{
+      if (screen.width > 750){
+        nav.style.height = "9%";
+      }
+    }
+
   }
 }

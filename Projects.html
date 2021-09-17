@@ -16,7 +16,7 @@
 		</div>
 		<script>
 		var MainElement = document.getElementById('Main');
-			if (MainElement.offsetWidth > 800){
+			if (MainElement.offsetWidth > 1100){
 				Site.DrawProjectsPage();
 				MainElement.onscroll = function(){
 					Site.HandleHomeScroll(this);
@@ -25,7 +25,7 @@
 				Site.DrawProjectsPage("Y");
 			}
 			window.onresize = function(){
-				if (MainElement.offsetWidth < 800){
+				if (MainElement.offsetWidth <  1100){
 						window.location.href = window.location.href;
 				}
 			}

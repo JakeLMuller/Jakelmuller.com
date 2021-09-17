@@ -316,6 +316,11 @@ loadjscssfile:function(filename, filetype){
     }
   },
   DrawProjectsV2:function(main, mobile){
+      if (screen.width < 1000){
+        if (screen.width > screen.height){
+          mobile = "Y";
+        }
+      }
       var data = Data.ProjectsData;
 
       var FilterBarNav = Site.create({"Type": "div","Class":"FilterBarNav","Id":"FilterBarNav","Parent": main});
@@ -452,6 +457,11 @@ loadjscssfile:function(filename, filetype){
         ClearSearchButton.style.height = "10%";
         ClearSearchButton.style.fontSize = "1em";
       }
+      if (mobile){
+        if (screen.width > screen.height){
+          FilterBarNav.style.height = "50%";
+        }
+      }
     },
     CurrentProjectData:[],
     drawProjectData: function(ProjectHolder, projects, mobile){
@@ -468,6 +478,11 @@ loadjscssfile:function(filename, filetype){
           if (mobile){
             ProjectCard.style.width = "46%";
             ProjectCard.style.height = "30%";
+
+          }else{
+            if (screen.width > screen.height){
+              ProjectCard.style.height = "40%";
+            }
           }
           ProjectCard.onmouseover = function(event){
             if (event.target.id != "OverlayProjectExpandCard"){
@@ -500,7 +515,7 @@ loadjscssfile:function(filename, filetype){
           var TextContentButton1 = Site.create({"Type": "div","Class":"PrjectButton","Id":"TextContentButton","Content":"View More","Parent": OverlayProjectCard});
           var TextContentButton2 = Site.create({"Type": "a","Href":projects[i]["Link"], "Class":"PrjectButton","Id":"TextContentButton","Content":"View Site","Style":"margin-top:-35%;", "Parent": OverlayProjectCard});
           if (mobile){
-            ProjectTitle.style.width = "46%";
+            ProjectTitle.style.width = "47%";
             ProjectCard.style.height = "30%";
             ProjectTitle.style.fontSize = "1em";
             ProjectTitle.style.width = "100%";
@@ -510,6 +525,12 @@ loadjscssfile:function(filename, filetype){
             TextContentButton1.style.fontSize = "1em";
             TextContentButton1.style.width = "80%";
             TextContentButton1.style.marginLeft = "10%";
+            if (screen.width > screen.height){
+              ProjectCard.style.height = "60%";
+            }else{
+              TextContentButton1.style.height = "7.5%";
+              TextContentButton2.style.height = "7.5%";
+            }
           }
           TextContentButton2.setAttribute("target","_blank");
           TextContentButton1.onclick = function(){
@@ -570,12 +591,12 @@ loadjscssfile:function(filename, filetype){
               PopUpContentHolder.style.width = "95%";
               PopUpContentHolder.style.marginLeft = "2.5%";
               PopUpButton1.style.width = "40%";
-              PopUpButton1.style.marginLeft = "7.5%";
+              PopUpButton1.style.marginLeft = "6%";
               PopUpButton1.style.fontSize = "1.1em";
               PopUpButton2.style.fontSize = "1.1em";
               PopUpButton2.style.width = "40%";
               PopUpButton2.style.fontSize = "1.1em";
-              PopUpButton2.style.marginLeft = "7.5%";
+              PopUpButton2.style.marginLeft = "6%";
             }
             if (projectData["OpenSource"] == "No"){
               PopUpButton1.style.display="none";
@@ -1370,6 +1391,11 @@ DrawWorkExperience:function(mainContent, mobile){
           right2.style.width = "90%";
           right2.style.height = "5%";
           menuNav.style.width = "70%";
+          if (screen.width > screen.height){
+              right2.style.height = "5%";
+              right2.style.width = "50%";
+              right2.style.height = "auto";
+          }
      }
      right2.style.height = (menu2.offsetHeight ) + "px";
      right2.onclick = function () {
@@ -1396,9 +1422,17 @@ DrawWorkExperience:function(mainContent, mobile){
         }else{
           link.style.fontSize = "160%";
           link.style.marginTop = "15%";
+          if (screen.width > screen.height){
+              link.style.fontSize = "100%";
+              link.style.marginTop = "6%";
+
+          }
         }
+
      }
     var menuLogo = Site.create({ "Type": "img", "Src": "./img/Logos/JMLogo.png", "Id": "menuLogo", "Class": "menuLogo", "Parent": colorbg });
+
+
      //var imgFooter = Site.create({ "Type": "img", "Src": "./img/me.jpg",  "Class": "imgFooter", "Parent": colorbg });
  },
 LocalFile:"",

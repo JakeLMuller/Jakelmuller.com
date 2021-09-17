@@ -6,6 +6,10 @@
   from { margin-left: 0%; }
   to   { margin-left: 15%;  }
 }
+@keyframes toLeftWide {
+  from { margin-left: 0%; }
+  to   { margin-left: 20%;  }
+}
 @keyframes toLeft2 {
   from { margin-left: 0%; }
   to   { margin-left: 2.5%;  }
@@ -31,6 +35,15 @@
   margin-top: 22%;
   margin-bottom: 13%;
   animation: fadein 3s,colorShiftToWhite 2.2s, toLeft .7s;
+}
+.navInfoMWide{
+  width: 80%;
+  height: auto;
+  float: left;
+  margin-left: 20%;
+  margin-top: 5%;
+  margin-bottom: 2%;
+  animation: fadein 3s,colorShiftToWhite 2.2s, toLeftWide .7s;
 }
 .mypicM{
   height: auto;
@@ -81,6 +94,16 @@
   line-height: 2em;
   animation: fadein 3s, toLeft2 .7s, colorShiftToWhite 2.2s;
 }
+.ContentMainMWide{
+  width: 60%;
+  height: auto;
+  margin-left: 20%;
+  color: white;
+  text-align: center;
+  font-size: 1.1em;
+  line-height: 2em;
+  animation: fadein 3s, toLeftWide .7s, colorShiftToWhite 2.2s;
+}
 .infoButtonM{
   width:70%;
   height: 5%;
@@ -110,7 +133,18 @@
 .bOneM{
     margin-top: 20%;
 }
+.socialsMWide{
+  position:absolute;
+  width: 7%;
+  height: auto;
+  top:27%;
+  left: 0%;
+  padding-bottom: 2%;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 2px 2px 6px black;
+  animation: absLeft 2.5s;
 
+}
 .socialsM{
   position:absolute;
   width: 10%;
